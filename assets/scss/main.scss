@@ -1,0 +1,17 @@
+
+// Resets
+@import 'reset-mayer';
+@import 'reset-custom';
+
+// Import globales variables
+@import 'variables';
+
+// Import Material Icon style
+// http://google.github.io/material-design-icons
+@import 'material-icon';
+
+// Import main stylesheet
+@import 'style';
+
+// Import style modification if language is rtl
+@import 'rtl';
