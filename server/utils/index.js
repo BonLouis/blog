@@ -20,7 +20,7 @@ module.exports = {
     }),
   addChar: (string, char = '# ') => {
     if (string instanceof Error) {
-      return addChar(string.stack)
+      return module.exports.addChar(string.stack)
     }
     return string
       .replace(/^\s+|\s+$/g, '')

@@ -9,29 +9,32 @@
         An easy and lightweight blog builder
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          class="button--green"
+        >Documentation</a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey"
-          >GitHub</a
-        >
-        <nuxt-link class="button--grey" to="/secret">This is secret</nuxt-link>
+        >GitHub</a>
+        <nuxt-link class="button--grey" to="/secret">
+          This is secret
+        </nuxt-link>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
 
 export default {
   components: {
     Logo
   }
-}
+};
 </script>
 
 <style>
