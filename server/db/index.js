@@ -43,11 +43,23 @@ function prettyQuery (query, params, error) {
 function prettyError (query, params, error) {
 	prettyQuery(query, params, error);
 }
-module.exports = {
+exports.query = (text, params) =>
+	pool
+		.query(text, params)
+		.then((x) => {
+			// yo
+			if (process.env.DEBUG) {
+				prettyQuery(text, params);
+			}
+			return x;
+		})
+		.catch(error => prettyError(text, params, error));
+module.exports = (() => ({
 	query: (text, params) =>
 		pool
 			.query(text, params)
 			.then((x) => {
+				// yo2
 				if (process.env.DEBUG) {
 					prettyQuery(text, params);
 				}
@@ -55,4 +67,4 @@ module.exports = {
 			})
 			.catch(error => prettyError(text, params, error)),
 	...require('./methods')
-};
+}))();

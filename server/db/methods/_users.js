@@ -3,7 +3,7 @@ const argon2 = require('argon2');
 const { ArgumentsError } = require('../../errors');
 const queries = require('../queries');
 const db = require('../');
-console.log('yo', db);
+console.log('yo', db.query.toString());
 module.exports = {
 	createUser: (params) => {
 		if (Array.isArray(params[0])) {
