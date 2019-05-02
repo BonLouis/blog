@@ -1,5 +1,4 @@
-const { query } = require('../');
-
+const { query } = require('../master');
 module.exports = () =>
 	query(`
 DROP SCHEMA IF EXISTS blog CASCADE;

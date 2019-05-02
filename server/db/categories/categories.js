@@ -1,7 +1,7 @@
 const format = require('pg-format');
 const { ArgumentsError } = require('../../errors');
-const queries = require('../queries');
-const { query } = require('../index.js');
+const { query } = require('../master');
+const queries = require('./queries');
 
 module.exports = {
 	createCategory: (params) => {

@@ -1,4 +1,5 @@
 const consola = require('consola');
+const { confirm } = require('../../utils/misc');
 
 const actions = [
 	['dropTables', require('./_dropTables.js')],
@@ -7,7 +8,6 @@ const actions = [
 	['doTriggers', require('./_createAndApplyTriggers.js')],
 	['populateTables', require('./_populateTables.js')]
 ];
-const { confirm } = require('./../../utils');
 
 (async () => {
 	if (process.argv[2] === '-y' || await confirm('Database will be ERASED, are you sure ?')) {
